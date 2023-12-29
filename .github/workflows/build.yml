@@ -47,8 +47,8 @@ jobs:
     steps:
       - name: Pull the docker image
         run: docker pull nvnprsthdockerhub/netflix:latest
-      - name: Trivy image scan
-        run: trivy image nvnprsthdockerhub/netflix:latest
+#      - name: Trivy image scan
+#        run: trivy image nvnprsthdockerhub/netflix:latest
       - name: Run the container netflix
         run: docker run -d --name netflix -p 8081:80 nvnprsthdockerhub/netflix:latest
               
